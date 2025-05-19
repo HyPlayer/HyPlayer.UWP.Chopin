@@ -1,0 +1,96 @@
+﻿<Page
+    x:Class="HyPlayer.UWP.Chopin.Demo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:HyPlayer.UWP.Chopin.Demo"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d">
+
+    <Grid>
+        <StackPanel
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Orientation="Vertical">
+            <StackPanel
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+                <TextBox Name="Url" />
+                <Button
+                    Name="AddOnline"
+                    Click="AddOnline_Click"
+                    Content="Add Online Song" />
+            </StackPanel>
+            <StackPanel
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+                <Button
+                    Name="SelectSong"
+                    Click="SelectSong_Click"
+                    Content="Select Songs" />
+                <Button
+                    Name="Start"
+                    Click="Start_Click"
+                    Content="Start" />
+                <Button
+                    Name="StartAudioGraph"
+                    Click="StartAudioGraph_Click"
+                    Content="StartAudioGraph" />
+                <Button
+                    Name="Stop"
+                    Click="Stop_Click"
+                    Content="PauseMasterTicket" />
+                <Button
+                    Name="StopAudioGraph"
+                    Click="StopAudioGraph_Click"
+                    Content="StopAudioGraph" />
+                <Button
+                    Name="ChangeDevice"
+                    Click="ChangeDevice_Click"
+                    Content="ChangeDevice" />
+                <Button
+                    Name="Default"
+                    Click="Default_Click"
+                    Content="Default" />
+                <Button
+                    Name="Dispose"
+                    Click="Dispose_Click"
+                    Content="Dispose" />
+            </StackPanel>
+            <Slider
+                Name="Timeline"
+                ManipulationCompleted="Timeline_ManipulationCompleted"
+                ManipulationMode="TranslateX"
+                ManipulationStarted="Timeline_ManipulationStarted"
+                ManipulationStarting="Timeline_ManipulationStarting"
+                Minimum="0" />
+            <Slider
+                Name="OutgoingVolume"
+                Maximum="100"
+                Minimum="0"
+                TickFrequency="1"
+                ValueChanged="OutgoingVolume_ValueChanged" />
+            <StackPanel Orientation="Horizontal">
+                <Button
+                    Name="Refresh"
+                    Click="Refresh_Click"
+                    Content="Refresh" />
+                <CheckBox Name="SetMasterTicket" Content="SetMasterTicket" />
+                <ComboBox Name="Songs" SelectionChanged="Songs_SelectionChanged" />
+                <Button
+                    Name="DisposeSong"
+                    Click="DisposeSong_Click"
+                    Content="DisposeSong" />
+            </StackPanel>
+            <Slider
+                Name="SongVolume"
+                Maximum="100"
+                Minimum="0"
+                TickFrequency="1"
+                ValueChanged="SongVolume_ValueChanged" />
+        </StackPanel>
+    </Grid>
+</Page>
